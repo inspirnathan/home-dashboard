@@ -1,8 +1,8 @@
 # Voice Controlled Dashboard
 
-![alt text](https://github.com/inspirnathan/home-dashboard/blob/master/screenshots/calendar.png "Calendar")
+<!-- ![alt text](https://github.com/inspirnathan/home-dashboard/blob/master/screenshots/calendar.png "Calendar") -->
 
-![alt text](https://github.com/inspirnathan/home-dashboard/blob/master/screenshots/weather.png "Weather")
+<!-- ![alt text](https://github.com/inspirnathan/home-dashboard/blob/master/screenshots/weather.png "Weather") -->
 
 This repo demonstrates the power of combining IFTTT Maker Webhooks, Google Assistant, Firebase real-time database, Firebase Cloud Functions, Vue.js, and Node.js to swap out or manipulate components on a dashboard using your voice. It contains code for the Vue.js frontend, Node.js backend, and Firebase Cloud Functions. For the weather portion of the dashboard, we will make use of the Dark Sky API. It was designed for large desktop views, so please forgive me if it looks very bad on mobile as I did not make it responsive. The global `font-size` can be changed in the `body` of the CSS in `App.vue` in order to make it look better in smaller desktop views. I hope to make a mobile-friendly version eventually! Alright, let's get started!
 
@@ -38,10 +38,10 @@ Sign up for the Dark Sky developer account at https://darksky.net/dev/register. 
 const darkSkyURL = 'https://api.darksky.net/forecast/[DARKSKY_API_KEY]/42.3601,-71.0589?exclude=[minutely,hourly,flags]';
 ```
 
-Replace `[DARKSKY_API_KEY]` with the value of your Dark Sky API Key.
+Replace `[DARKSKY_API_KEY]` with the value of your Dark Sky API Key. You will also want to replace the latitude and longitude with your location. In the code snippet above, `42.3601` is the latitude and `-71.0589` is the longitude. You can Google search your location's latitude and longitude and then replace `42.3601,-71.0589` with your values. Make sure you don't forget the negative sign on the latitude or longitude if your location uses it.
 
 # IFTTT Setup
-Go to https://ifttt.com/ and create a new account if you don't already have one. You can login with Google or Facebook if that is faster. Once you create an account, we can begin creating our Applets. We will be making a total of four. This can be done by clicking on your username on the top right of the page on their website. If you are using the mobile app (yes, there is one), then you need to go to `My Applets` and hit the `+` sign on the top right corner. You will be prompted to create the `This` part of the applet. Later, you will be prompted to create the `That` portion of the applet hence the name, If This Then That (IFTTT). For the `This` portion, search for Google Assistant. You will have the choice between 4 triggers. We will choose the appropriate trigger for each of the four types of commands we will be using. When setting up the Google Assistant trigger, you can set three commands that will trigger an action. Then, in the `That` portion, you will search for a Webhook action service that will respond to the Google Assistant trigger. In this app, I have coded four components that respond to firebase changes. When you send a voice command to Google Assistant connected to a Firebase Cloud Function, it will update Firebase, which will in turn, update the dashboard in real-time. Let's go through them one by one.
+Go to https://ifttt.com/ and create a new account if you don't already have one. You can login with Google or Facebook if that is faster. Once you create an account, we can begin creating our Applets. We will be making a total of four. This can be done by clicking on your username on the top right of the page on their website. If you are using the mobile app (yes, there is one), then you need to go to `My Applets` and hit the `+` sign on the top right corner. You will be prompted to create the `This` part of the applet. Later, you will be prompted to create the `That` portion of the applet hence the name, If This Then That (IFTTT). For the `This` portion, search for Google Assistant. You will have the choice between 4 triggers. We will choose the appropriate trigger for each of the four types of commands we will be using. When setting up the Google Assistant trigger, you can set three commands that will trigger an action. Then, in the `That` portion, you will search for a Webhook action service that will respond to the Google Assistant trigger. In this app, I have coded four components that respond to Firebase changes. When you send a voice command to Google Assistant connected to a Firebase Cloud Function, it will update Firebase, which will in turn, update the dashboard in real-time. Let's go through them one by one.
 
 ## Updating the Screen Component
 *Trigger Type: Say a phrase with a text ingredient*
