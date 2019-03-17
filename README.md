@@ -79,11 +79,11 @@ These commands will add events to our calendar. However, only one text ingredien
 
 These commands behave similarly to adding event data. However, now we are adding food expiration events. The voice command may seem awkward, but I had to make sure that the word, `on`, was used as a delimiter and thus had to keep the voice command together instead of spread apart. It would be nice to say something like, `Apples will expire on March 25th`, but then `will expire` gets in the way of the delimiter. Therefore, I had to make these awkward commands as a compromise. As mentioned in the `Alternative Solutions` section, you could use Dialogflow if you want a cleaner command. The webhook URL will be: https://[YOUR_CLOUD_FUNCTION_DOMAIN].cloudfunctions.net/addFoodEvent?str=$
 
-| Voice Command              | Example Command                 | Text Ingredient |
-| -------------------------- | ------------------------------- | --------------- |
-| Change the screen to $     | Change the screen to weather    | weather         |
-| Change screen to $         | Change screen to calendar       | calendar        |
-| Change it to the $ screen  | Change it to the weather screen | weather         |
+| Voice Command         | Example Command                            | Text Ingredient        |
+| --------------------- | ------------------------------------------ | ---------------------- |
+| New expiration item $ | New expiration item avocados on March 20th | avocados on March 20th |
+| Expiration item $     | Expiration item milk on March 21st         | milk on March 21st     |
+| Expiration time $     | Expiration time eggs on March 22nd         | eggs on March 22nd     |
 
 ## Starting the App
 Finally, let's start the app. Run `npm start` to start both the Vue.js app and Node.js server simultaneously. The Node.js server serves as a proxy to the Dark Sky API, since Dark Sky does not allow cross-origin resource sharing (CORS). They have disabled CORS on their servers. An alternative approach would be to use CORS Anywhere to make requests directly from the client side: https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/[DARKSKY_API_KEY]/42.3601,-71.0589?exclude=[minutely,hourly,flags]. This would allow you to remove the Node portion of this project if you chose to because CORS Anywhere would serve as a proxy. You would still need to use Node.js for the Firebase Cloud Functions, however.
