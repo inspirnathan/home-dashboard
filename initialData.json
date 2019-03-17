@@ -1,0 +1,46 @@
+{
+  "application" : {
+    "account" : 300,
+    "events" : {
+      "-LZVAUnS7yYkX_EbF9BQ" : {
+        "date" : "2019-02-25",
+        "title" : "Feed Cat"
+      },
+      "-La7jgJhoWRHFc7EnTW8" : {
+        "date" : "Invalid date",
+        "title" : "Pi Day"
+      },
+      "-La7jiiAoLqN031y_jVZ" : {
+        "date" : "2019-03-14",
+        "title" : "Pi Day"
+      },
+      "-La7k4HE3XxBkNMZXvmC" : {
+        "date" : "2019-03-17",
+        "title" : "File Taxes"
+      },
+      "-La7k8-fjcSDXBeQj48t" : {
+        "date" : "2019-03-20",
+        "title" : "Pet Cat"
+      }
+    },
+    "foodEvents" : {
+      "-LZVCSlLEaYQR70raOnR" : {
+        "date" : "2019-02-27",
+        "title" : "Avocados"
+      },
+      "-La7kDZvMsTnz_P7KMVC" : {
+        "date" : "2019-03-23",
+        "title" : "Eggs"
+      },
+      "-La7kHei1AML9ncavYat" : {
+        "date" : "2019-03-23",
+        "title" : "Milk"
+      },
+      "-La7kUM75jMzYVO1czSL" : {
+        "date" : "2019-03-20",
+        "title" : "Kiwis"
+      }
+    },
+    "screen" : "calendar"
+  }
+}
