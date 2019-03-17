@@ -1,8 +1,8 @@
 # Voice Controlled Dashboard
 
-<!-- ![alt text](https://github.com/inspirnathan/home-dashboard/blob/master/screenshots/calendar.png "Calendar") -->
+![alt text](https://github.com/inspirnathan/home-dashboard/blob/master/screenshots/calendar.png "Calendar")
 
-<!-- ![alt text](https://github.com/inspirnathan/home-dashboard/blob/master/screenshots/weather.png "Weather") -->
+![alt text](https://github.com/inspirnathan/home-dashboard/blob/master/screenshots/weather.png "Weather")
 
 This repo demonstrates the power of combining IFTTT Maker Webhooks, Google Assistant, Firebase real-time database, Firebase Cloud Functions, Vue.js, and Node.js to swap out or manipulate components on a dashboard using your voice. It contains code for the Vue.js frontend, Node.js backend, and Firebase Cloud Functions. For the weather portion of the dashboard, we will make use of the Dark Sky API. It was designed for large desktop views, so please forgive me if it looks very bad on mobile as I did not make it responsive. The global `font-size` can be changed in the `body` of the CSS in `App.vue` in order to make it look better in smaller desktop views. I hope to make a mobile-friendly version eventually! Alright, let's get started!
 
